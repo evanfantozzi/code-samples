@@ -1,6 +1,6 @@
 # Code Samples
 
-Three projects spanning cloud infrastructure, data engineering, and applied ML.
+Snippets from three projects spanning cloud infrastructure, data engineering, and applied ML.
 
 ---
 
