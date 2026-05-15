@@ -396,10 +396,6 @@ def subscribe():
         pass
 
 
-"""DO NOT CHANGE CODE BELOW THIS LINE
-*******************************************************************************
-"""
-
 """Set premium_user role
 """
 
