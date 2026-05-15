@@ -24,7 +24,7 @@ InsightOut is an ongoing group project for my applied Civic Technology course. I
 
 ---
 
-## 3. Applied NLP Analysis 
+## 3. Applied NLP Analysis of the TV show Scrubs
 
 **File:** [`scrubs-analysis/fine_tune.ipynb`](https://github.com/evanfantozzi/code-samples/blob/main/scrubs-analysis/fine_tune.ipynb)
 
