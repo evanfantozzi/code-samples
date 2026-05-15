@@ -8,9 +8,9 @@ Three projects spanning cloud infrastructure, data engineering, and applied ML.
 
 **Files:** [`cloud-computing/views.py`](cloud-computing/views.py), [`cloud-computing/annotator.py`](cloud-computing/annotator.py)
 
-A full-stack genomic annotation platform built on AWS. Users upload VCF files through a Flask web app, which generates S3 presigned POSTs so files go directly to S3 without passing through the server. After upload, the web layer writes a job record to DynamoDB and publishes to SNS. A separate annotator service runs on EC2, long-polling an SQS queue, downloading input files from S3, spawning annotation subprocesses per job, and updating job status in DynamoDB with conditional writes to prevent race conditions. Results are served back via presigned GET URLs.
+A genomic annotation platform built on AWS that I worked on as part of my cloud computing course. Users upload VCF files through a Flask web app, which generates S3 presigned POSTs, so files go directly to S3 without passing through the server. After upload, the app writes a job record to DynamoDB and publishes a job to SNS. A separate annotator service runs on EC2, long-polling an SQS queue, downloading input files from S3, spawning annotation subprocesses per job, and updating job status in DynamoDB with conditional writes to prevent race conditions. Results are served back via presigned GET URLs.
 
-**Key AWS services:** S3, SQS, SNS, DynamoDB, EC2
+**AWS services used:** S3, SQS, SNS, DynamoDB, EC2
 
 ---
 
