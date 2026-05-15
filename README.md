@@ -18,16 +18,16 @@ A genomic annotation platform built on AWS that I worked on as part of my cloud 
 
 **Files:** [`insightout/models.py`](insightout/models.py), [`insightout/add_data.py`](insightout/add_data.py)
 
-InsightOut is a research platform designed to help global health organizations predict child health outcomes in low-resource settings using DHS survey data. `models.py` defines the full relational schema in Django — geographic hierarchy (countries, admin units, clusters), raw and cleaned survey variables, households and individuals, satellite data, and ML model outputs. `add_data.py` implements the data ingestion pipeline, with functions that upsert DHS survey data from DataFrames into the database using atomic transactions and in-memory caching to minimize redundant queries across large datasets.
+InsightOut is an ongoing group project for my applied Civic Technology course. It is a tool designed to help global health organizations predict child health outcomes in low-resource settings using Demographic and Health Survey data. `models.py` defines the full relational schema in Django — geographic hierarchy (countries, admin units, clusters), raw and cleaned survey variables, households and individuals, satellite data, and ML model outputs. `add_data.py` implements the data ingestion pipeline, with functions that upsert DHS survey data from DataFrames into the database using atomic transactions and in-memory caching to minimize redundant queries across large datasets.
 
 **Stack:** Django, GeoDjango, PostgreSQL/PostGIS, pandas
 
 ---
 
-## 3. Scrubs NLP Analysis (Applied ML)
+## 3. Applied NLP Analysis 
 
 **File:** [`scrubs-analysis/fine_tune.ipynb`](scrubs-analysis/fine_tune.ipynb)
 
-An end-to-end NLP pipeline to analyze how humor and emotional intensity shape audience reactions to the TV show Scrubs. After scraping episode transcripts and manually labeling a sample of scenes, I fine-tuned DeBERTa (via HuggingFace) to classify scenes by humor and emotional intensity, experimenting with different optimizers (AdamW vs. SGD), dropout configurations, and pooling strategies (CLS token vs. mean pooling). I also prompted Gemini 2.5 models as a baseline. Scene-level predictions were aggregated into episode-level features and used to model IMDb ratings, finding that emotional variance accounts for roughly 18% of rating variability.
+Part of an NLP pipeline to analyze how humor and emotional intensity shape the TV show Scrubs. After scraping episode transcripts and manually labeling a sample of scenes, I fine-tuned DeBERTa to classify scenes by humor and emotional intensity, experimenting with different optimizers (AdamW vs. SGD), dropout configurations, and pooling strategies (CLS token vs. mean pooling).
 
-**Stack:** PyTorch, HuggingFace Transformers, DeBERTa, Gemini API
+**Stack:** PyTorch, HuggingFace Transformers, DeBERTa
